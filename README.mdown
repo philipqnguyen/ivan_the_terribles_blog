@@ -20,4 +20,4 @@ Benchmark results:
 
 [Load Impact Benchmark](https://loadimpact.com/test/view/1821630)
 
-[Imgur](http://i.imgur.com/0TaHkV4.png)
+![Imgur](http://i.imgur.com/0TaHkV4.png)
