@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.paginate(page: params[:page], per_page: 1)
+    @posts = Post.paginate(page: params[:page], per_page: 2)
     # @comments = Post.comments.paginate(page: params[:page], per_page: 30)
 
     # respond_to do |format|
