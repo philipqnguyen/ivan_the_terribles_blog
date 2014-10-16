@@ -15,3 +15,9 @@ I know it is a little slow (but totes worth it!!!!)... _Do you know how I can ma
 - Indexed post_id in Comments
 - Indexed comment_id in Replies
 - Added infinite scrolling with two posts per page load
+
+Benchmark results:
+
+[Load Impact Benchmark](https://loadimpact.com/test/view/1821630)
+
+[Imgur](http://i.imgur.com/0TaHkV4.png)
