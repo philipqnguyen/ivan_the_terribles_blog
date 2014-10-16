@@ -1,9 +1,12 @@
 <h1>Ivan the Terrible's Blog</h1>
 
-<section class="blog">
+<section id="blog-section" class="blog">
   <%= render @posts %>
 </section>
 
 <br />
 
 <%= link_to 'New Post', new_post_path %>
+
+<br />
+<%= will_paginate @posts %>
