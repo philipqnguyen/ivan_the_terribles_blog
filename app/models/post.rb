@@ -3,15 +3,15 @@ class Post < ActiveRecord::Base
   has_many :comments, dependent: :destroy
 
   def publish_status
-    published? ? "published" : "unpublished"
+    published? ? 'published' : 'unpublished'
   end
 
   def self.search(search)
     if search
       search.strip
-      includes(comments: :replies).where("title like '%#{search}%'")
+      includes(comments: :replies).where('title like ?', "%#{search}%")
     else
-      includes(comments: :replies).order("updated_at DESC")
+      includes(comments: :replies).order('updated_at DESC')
     end
   end
 end

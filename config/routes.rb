@@ -4,7 +4,6 @@ IvanTheTerriblesBlog::Application.routes.draw do
   resources :comments
   resources :replies
 
-  root :to => 'posts#index'
+  root to: 'posts#index'
 
 end
-

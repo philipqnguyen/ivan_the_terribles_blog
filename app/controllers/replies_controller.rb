@@ -47,7 +47,7 @@ class RepliesController < ApplicationController
         format.html { redirect_to @reply, notice: 'Reply was successfully created.' }
         format.json { render json: @reply, status: :created, location: @reply }
       else
-        format.html { render action: "new" }
+        format.html { render action: 'new' }
         format.json { render json: @reply.errors, status: :unprocessable_entity }
       end
     end
@@ -63,7 +63,7 @@ class RepliesController < ApplicationController
         format.html { redirect_to @reply, notice: 'Reply was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
+        format.html { render action: 'edit' }
         format.json { render json: @reply.errors, status: :unprocessable_entity }
       end
     end

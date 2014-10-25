@@ -10,11 +10,11 @@ class HomepageTest < ActionDispatch::PerformanceTest
     SCALE.times do
       p = Post.create(
         title: Faker::Company.catch_phrase,
-        body: Faker::Lorem.paragraphs.join("<br>").html_safe
+        body: Faker::Lorem.paragraphs.join('<br>').html_safe
       )
       SCALE.times do
-        c = p.comments.build(body: Faker::Lorem.paragraphs.join("<br>").html_safe)
-        r = c.replies.build(body: Faker::Lorem.paragraphs.join("<br>").html_safe)
+        c = p.comments.build(body: Faker::Lorem.paragraphs.join('<br>').html_safe)
+        r = c.replies.build(body: Faker::Lorem.paragraphs.join('<br>').html_safe)
         p.save!
       end
     end
