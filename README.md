@@ -27,3 +27,9 @@ SQL Injection:
 ```
 foo%'); INSERT INTO posts (id,title,body,created_at,updated_at) VALUES (99,'hacked','hacked alright','2013-07-18','2013-07-18'); SELECT "posts".* FROM "posts" WHERE (title like 'hacked%
 ```
+
+# Update on vulnerabilities!
+
+SQL injections no longer work because `includes(comments: :replies).where("title like '%#{search}%'")` has been changed to `includes(comments: :replies).where('title like ?', "%#{search}%")` in order to make the search term a parameter.
+
+XSS has also been prevented on some browsers such as Chrome by switching `response.headers['X-XSS-Protection'] = '0'` to `response.headers['X-XSS-Protection'] = '1'` in application_controller.rb.
