@@ -1,13 +1,13 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-Vagrant.configure("2") do |config|
+Vagrant.configure('2') do |config|
   # All Vagrant configuration is done here. The most common configuration
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "raringruby"
+  config.vm.box = 'raringruby'
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
@@ -75,13 +75,13 @@ Vagrant.configure("2") do |config|
   # path, and data_bags path (all relative to this Vagrantfile), and adding
   # some recipes and/or roles.
   #
-  config.vm.provision :shell, :inline => "/etc/init.d/networking restart"
+  config.vm.provision :shell, inline: '/etc/init.d/networking restart'
   config.vm.provision :chef_solo do |chef|
-    chef.add_recipe "apt"
-    chef.add_recipe "build-essential"
-    chef.add_recipe "apache2"
-    chef.add_recipe "postgresql"
-    chef.add_recipe "rvm"
+    chef.add_recipe 'apt'
+    chef.add_recipe 'build-essential'
+    chef.add_recipe 'apache2'
+    chef.add_recipe 'postgresql'
+    chef.add_recipe 'rvm'
   end
   # config.vm.provision :chef_solo do |chef|
   #   chef.cookbooks_path = "../my-recipes/cookbooks"
